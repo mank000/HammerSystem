@@ -1,0 +1,11 @@
+{% block content %}
+<body>
+    <h1>Введите код авторизации</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Подтвердить</button>
+    </form>
+    <p>Ваш код {{ code }}</p>
+</body>
+{% endblock %}
